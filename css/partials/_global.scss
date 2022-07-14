@@ -1,0 +1,6 @@
+$gradient-apaque: linear-gradient(90deg, #e6658799 0%, #f0945899 100%);
+$gradient: linear-gradient(90deg, #e66587 0%, #f09458 100%);
+
+@mixin transition {
+  transition: all 0.3s ease 0s;
+}

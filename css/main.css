@@ -1,10 +1,91 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100&display=swap");
-.section-hero .container {
+h1 {
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  margin: 10px 0 20px;
+}
+
+.hero-small {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.section-hero {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.section-hero header .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 30px 0;
 }
-.section-hero .container .row {
+.section-hero .row {
   height: 600px;
+}
+
+header {
+  position: relative;
+}
+header .container {
+  position: absolute;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: -0.4px;
+}
+
+nav {
+  margin-right: 70px;
+  transition: all 0.3s ease 0s;
+  transform-origin: 100% 50%;
+}
+nav a {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 25px;
+  transition: all 0.3s ease 0s;
+}
+nav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.btn {
+  line-height: 40px;
+  padding: 0 30px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #222222;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+.btn span {
+  color: #fff;
+}
+.btn span:nth-child(1) {
+  margin-right: 10px;
+}
+
+.arrow-right::before {
+  content: " \e87a";
 }
 
 :root {
@@ -45,7 +126,15 @@ body {
   display: flex;
 }
 
+.column {
+  flex-direction: column;
+}
+
 .centered {
   justify-content: center;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */

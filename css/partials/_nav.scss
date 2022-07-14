@@ -1,0 +1,41 @@
+nav {
+  margin-right: 70px;
+  @include transition;
+  transform-origin: 100% 50%;
+
+  a {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(2155, 255, 255, 0.7);
+    margin: 0 25px;
+    @include transition;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.btn {
+  line-height: 40px;
+  padding: 0 30px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #222222;
+  font-weight: 500;
+  position: relative;
+  @include transition;
+
+  span {
+    color: #fff;
+  }
+
+  span:nth-child(1) {
+    margin-right: 10px;
+  }
+}
+
+.arrow-right::before {
+  content: " \e87a";
+}

@@ -1,10 +1,16 @@
 .section-hero {
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
 
-    .row {
-      height: 600px;
+  header {
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 30px 0;
     }
+  }
+  .row {
+    height: 600px;
   }
 }
