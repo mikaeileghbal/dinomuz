@@ -60,11 +60,8 @@ h6 {
   font-weight: 500;
 }
 
-h1 {
-  font-size: 36px;
-  color: white;
-  font-weight: 500;
-  margin: 10px 0 20px;
+h3 {
+  font-size: 24px;
 }
 
 .hero-small {
@@ -78,6 +75,35 @@ h1 {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 36px;
+  color: white;
+  font-weight: 500;
+  margin: 10px 0 20px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .section-hero {
@@ -255,4 +281,37 @@ nav.active {
   display: flex;
   color: #f09458;
   z-index: 1;
+}
+
+.section-service {
+  padding: 100px 0;
+}
+.section-service .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.section-service .header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-service .header span {
+  font-size: 14px;
+}
+.section-service .service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.6em 0.16em;
+  margin-top: 30px;
+}
+.section-service .service-item {
+  padding: 0 15px;
+}
+.section-service .item-body {
+  margin-top: 30px;
+}
+.section-service h6 {
+  margin-bottom: 10px;
+}
+.section-service img {
+  width: 100%;
 }/*# sourceMappingURL=index.css.map */
