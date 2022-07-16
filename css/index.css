@@ -112,9 +112,10 @@ header .container {
 }
 
 nav {
+  transform: scale(0);
   margin-right: 70px;
-  transition: all 0.3s ease 0s;
   transform-origin: 100% 50%;
+  transition: all 0.3s ease 0s;
 }
 nav a {
   font-size: 12px;
@@ -150,6 +151,7 @@ nav a:hover {
   content: "→";
 }
 
+/* menu-bar styles */
 .menu-icon {
   flex-direction: column;
   width: 20px;
@@ -158,10 +160,32 @@ nav a:hover {
 }
 
 .menu-bar {
+  display: inline-block;
   height: 2px;
   width: 100%;
   background-color: #fff;
   margin: 2px 0;
+  transition: all 0.3s ease 0s;
+}
+
+.menu-icon.open > .menu-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+}
+
+.menu-icon.open > .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open > .menu-bar:nth-child(3) {
+  transform: rotate(315deg) translate(5px, -3px);
+}
+
+nav.active {
+  transform: scale(1);
+}
+
+.menu-icon.open {
+  width: 23px;
 }
 
 .section-feature {
@@ -171,7 +195,7 @@ nav a:hover {
 .section-feature .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
+  gap: 1.89em;
   padding: 0 1em;
   color: #222;
 }
@@ -189,14 +213,30 @@ nav a:hover {
   margin-bottom: 16px;
 }
 .section-feature .card {
-  gap: 1.8em;
+  gap: 1.6em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-.section-feature .card:hover .card-icon {
+.section-feature .card .card-icon span::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
   background: linear-gradient(90deg, #e66587 0%, #f09458 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+.section-feature .card:hover .card-icon > span::after {
+  opacity: 1;
+}
+.section-feature .card:hover span {
+  color: #fff;
 }
 .section-feature .card-icon {
   flex: 0 0 60px;
@@ -205,6 +245,7 @@ nav a:hover {
   border-radius: 3px;
   border: 1px solid #eee;
   background: #fff;
+  position: relative;
   transition: all 0.3s ease;
 }
 .section-feature .card-description {
@@ -212,4 +253,6 @@ nav a:hover {
 }
 .section-feature .card span {
   display: flex;
+  color: #f09458;
+  z-index: 1;
 }/*# sourceMappingURL=index.css.map */

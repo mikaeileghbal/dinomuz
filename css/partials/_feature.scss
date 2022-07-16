@@ -5,7 +5,7 @@
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
+    gap: 1.89em;
     padding: 0 1em;
     color: #222;
   }
@@ -26,11 +26,29 @@
   }
 
   .card {
-    gap: 1.8em;
+    gap: 1.6em;
     user-select: none;
 
-    &:hover .card-icon {
+    .card-icon span::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
       background: $gradient;
+      opacity: 0;
+      z-index: -1;
+      @include transition;
+    }
+
+    &:hover .card-icon > span::after {
+      opacity: 1;
+    }
+
+    &:hover span {
+      color: #fff;
     }
   }
 
@@ -41,6 +59,7 @@
     border-radius: 3px;
     border: 1px solid #eee;
     background: #fff;
+    position: relative;
     transition: all 0.3s ease;
   }
 
@@ -50,5 +69,7 @@
 
   .card span {
     display: flex;
+    color: #f09458;
+    z-index: 1;
   }
 }
