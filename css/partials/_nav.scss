@@ -33,9 +33,25 @@ nav {
 
   span:nth-child(1) {
     margin-right: 10px;
+    font-size: 14px;
   }
 }
 
 .arrow-right::before {
-  content: " \e87a";
+  content: "\2192";
+}
+
+.menu-icon {
+  flex-direction: column;
+
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.menu-bar {
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  margin: 2px 0;
 }

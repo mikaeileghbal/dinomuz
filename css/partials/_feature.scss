@@ -1,0 +1,54 @@
+.section-feature {
+  background-color: #fff;
+  padding: 70px 0 80px;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    padding: 0 1em;
+    color: #222;
+  }
+
+  h6 {
+    color: #222;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  p {
+    color: #777777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin-bottom: 16px;
+  }
+
+  .card {
+    gap: 1.8em;
+    user-select: none;
+
+    &:hover .card-icon {
+      background: $gradient;
+    }
+  }
+
+  .card-icon {
+    flex: 0 0 60px;
+    width: 60px;
+    height: 60px;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .card-description {
+    flex: 1;
+  }
+
+  .card span {
+    display: flex;
+  }
+}
