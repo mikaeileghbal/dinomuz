@@ -38,6 +38,10 @@ nav {
   }
 }
 
+.btn-gradient {
+  background-image: $gradient;
+}
+
 .arrow-right::before {
   content: "\2192";
 }
