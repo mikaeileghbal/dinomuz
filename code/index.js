@@ -4,4 +4,22 @@ window.addEventListener("DOMContentLoaded", function (e) {
     menuIcon.classList.toggle("open");
     document.querySelector("nav").classList.toggle("active");
   });
+
+  const wrapper = document.querySelector(".carousel-wrapper");
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.querySelectorAll(".dot");
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", (e) => {
+      dots.forEach((dot) => dot.classList.remove("active"));
+
+      slides[index + 1].scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+
+      dot.classList.add("active");
+    });
+  });
 });
