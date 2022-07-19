@@ -13,6 +13,7 @@ window.addEventListener("DOMContentLoaded", function (e) {
     dot.addEventListener("click", (e) => {
       dots.forEach((dot) => dot.classList.remove("active"));
 
+      console.log(index);
       slides[index + 1].scrollIntoView({
         behavior: "smooth",
         inline: "center",
@@ -20,6 +21,11 @@ window.addEventListener("DOMContentLoaded", function (e) {
       });
 
       dot.classList.add("active");
+
+      Array.prototype.slice
+        .call(slides)
+        .forEach((slide) => slide.classList.remove("active"));
+      slides[index + 1].classList.add("active");
     });
   });
 });
