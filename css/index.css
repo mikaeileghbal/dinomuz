@@ -360,6 +360,10 @@ nav.active {
   background-repeat: no-repeat;
   background-position: center center;
 }
+.carousel .slide:nth-child(1) {
+  margin-left: -34%;
+}
+
 .dot-container {
   margin-top: 3em;
   padding: 1em;
