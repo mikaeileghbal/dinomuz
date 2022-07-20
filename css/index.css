@@ -51,6 +51,10 @@ a {
   text-decoration: none;
 }
 
+.fa {
+  font-size: 20px;
+}
+
 .hero-small {
   font-size: 12px;
   font-weight: 300;
@@ -205,38 +209,44 @@ nav.active {
   width: 23px;
 }
 
-.section-feature {
+.section-feature,
+.section-widget {
   background-color: #fff;
   padding: 70px 0 80px;
 }
-.section-feature .container {
+.section-feature .container,
+.section-widget .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.89em;
   padding: 0 1em;
   color: #222;
 }
-.section-feature h6 {
+.section-feature h6,
+.section-widget h6 {
   color: #222;
   font-size: 14px;
   text-transform: uppercase;
   margin: 20px 0;
 }
-.section-feature p {
+.section-feature p,
+.section-widget p {
   color: #777777;
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5em;
   margin-bottom: 16px;
 }
-.section-feature .card {
+.section-feature .card,
+.section-widget .card {
   gap: 1.6em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-.section-feature .card .card-icon span::after {
+.section-feature .card .card-icon span::after,
+.section-widget .card .card-icon span::after {
   position: absolute;
   content: "";
   left: 0;
@@ -249,13 +259,16 @@ nav.active {
   z-index: -1;
   transition: all 0.3s ease 0s;
 }
-.section-feature .card:hover .card-icon > span::after {
+.section-feature .card:hover .card-icon > span::after,
+.section-widget .card:hover .card-icon > span::after {
   opacity: 1;
 }
-.section-feature .card:hover span {
+.section-feature .card:hover span,
+.section-widget .card:hover span {
   color: #fff;
 }
-.section-feature .card-icon {
+.section-feature .card-icon,
+.section-widget .card-icon {
   flex: 0 0 60px;
   width: 60px;
   height: 60px;
@@ -265,10 +278,12 @@ nav.active {
   position: relative;
   transition: all 0.3s ease;
 }
-.section-feature .card-description {
+.section-feature .card-description,
+.section-widget .card-description {
   flex: 1;
 }
-.section-feature .card span {
+.section-feature .card span,
+.section-widget .card span {
   display: flex;
   color: #f09458;
   z-index: 1;
@@ -302,6 +317,7 @@ nav.active {
 }
 .section-service .item-header {
   position: relative;
+  background-color: aqua;
 }
 .section-service .item-header .overlay {
   position: absolute;
@@ -320,8 +336,10 @@ nav.active {
   margin-bottom: 10px;
 }
 .section-service img {
+  display: inline-block;
   width: 100%;
   border-radius: 0;
+  margin: 0;
 }
 
 .section-works {
@@ -329,6 +347,7 @@ nav.active {
   background-color: white;
 }
 .section-works .container {
+  max-width: 1140px;
   margin: 0 auto;
 }
 .section-works .header {
@@ -471,4 +490,125 @@ nav.active {
   background-position: center center;
   background-size: cover;
   z-index: -1;
+}
+
+.section-subscribe {
+  padding: 100px 0;
+  background-color: white;
+}
+.section-subscribe .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.section-subscribe .header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-subscribe h3 {
+  color: #222;
+}
+.section-subscribe p {
+  color: #777;
+}
+.section-subscribe a {
+  color: white;
+  position: absolute;
+  right: 1.25em;
+}
+.section-subscribe .form-container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+.section-subscribe input {
+  padding: 0 184px 0 25px;
+  line-height: 50px;
+  border: none;
+  border-radius: 25px;
+  background-color: #f9f9ff;
+  color: #777;
+  font-size: 14px;
+  width: 100%;
+}
+
+.section-widget {
+  padding: 70px 0 100px;
+  background-color: transparent;
+}
+.section-widget .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.89em;
+  padding: 0 1em;
+  color: #222;
+}
+.section-widget .card:hover .card-icon {
+  border-color: transparent;
+}
+.section-widget h6 {
+  color: white;
+}
+.section-widget p {
+  color: white;
+  font-weight: 400;
+}
+.section-widget .card-icon {
+  background-color: transparent;
+}
+.section-widget .card-icon span {
+  color: white;
+}
+
+footer {
+  padding: 15px 15px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+footer .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .copyright {
+  font-weight: 400;
+  font-size: 14px;
+}
+footer .copyright a,
+footer .copyright i {
+  color: #e66587;
+  font-weight: 300;
+  font-size: 14px;
+}
+footer .footer-social a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+footer .footer-social a::after {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(90deg, #e66587 0%, #f09458 100%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.3s ease 0s;
+}
+footer .footer-social a:hover::after {
+  opacity: 1;
+}
+footer .footer-social a:hover {
+  border: none;
+}
+footer .footer-social a i {
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */
